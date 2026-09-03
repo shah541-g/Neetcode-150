@@ -71,4 +71,4 @@ int main() {
     // Expected: -1
 
     return 0;
-}
+  }
