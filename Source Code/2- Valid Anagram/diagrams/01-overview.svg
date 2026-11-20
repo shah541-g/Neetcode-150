@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Valid Anagram frequency balance overview</title>
+  <defs>
+    <style>
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+      .balance { animation: balance 6s infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes balance { 0%,100% { transform: scale(1) } 50% { transform: scale(1.04) } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+  <text x="400" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700">Add s, subtract t</text>
+  <rect x="55" y="92" width="190" height="82" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+  <text x="150" y="141" text-anchor="middle" fill="#e2e8f0" font-size="26" class="mono">s = abc</text>
+  <rect x="555" y="92" width="190" height="82" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+  <text x="650" y="141" text-anchor="middle" fill="#e2e8f0" font-size="26" class="mono">t = cab</text>
+  <g class="balance">
+    <rect x="270" y="78" width="260" height="110" rx="18" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+    <text x="400" y="112" text-anchor="middle" fill="#94a3b8" font-size="16">alphabetsFreq[26]</text>
+    <text x="400" y="158" text-anchor="middle" fill="#22c55e" font-size="30" font-weight="700" class="mono">all 0</text>
+  </g>
+  <path d="M245 133 H270" stroke="#38bdf8" stroke-width="5"/>
+  <path d="M555 133 H530" stroke="#f59e0b" stroke-width="5"/>
+  <rect x="215" y="245" width="370" height="62" rx="14" fill="#1e293b" stroke="#22c55e"/>
+  <text x="400" y="282" text-anchor="middle" fill="#22c55e" font-size="24" font-weight="700" class="mono">net counts are equal → true</text>
+</svg>

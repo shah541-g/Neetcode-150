@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  <title>Daily Temperatures dry run</title>
+  <desc>All eight input days show the stack of unresolved temperatures and result values.</desc>
+  <defs>
+    <style>
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+      :root { --total: 14s; }
+      .pointer { animation: pointer var(--total) linear infinite; transform-box: fill-box; transform-origin: center; }
+      .s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8 { opacity: 0; animation-duration: var(--total); animation-iteration-count: infinite; }
+      .s1 { animation-name: s1; } .s2 { animation-name: s2; }
+      .s3 { animation-name: s3; } .s4 { animation-name: s4; }
+      .s5 { animation-name: s5; } .s6 { animation-name: s6; }
+      .s7 { animation-name: s7; } .s8 { animation-name: s8; }
+      @keyframes pointer {
+        0%,1% { transform: translateX(0); opacity: 0; }
+        2%,10% { transform: translateX(0); opacity: 1; }
+        12%,20% { transform: translateX(54px); opacity: 1; }
+        22%,30% { transform: translateX(108px); opacity: 1; }
+        32%,40% { transform: translateX(162px); opacity: 1; }
+        42%,50% { transform: translateX(216px); opacity: 1; }
+        52%,60% { transform: translateX(270px); opacity: 1; }
+        62%,70% { transform: translateX(324px); opacity: 1; }
+        72%,90% { transform: translateX(378px); opacity: 1; }
+        96% { transform: translateX(378px); opacity: 0; }
+        100% { transform: translateX(0); opacity: 0; }
+      }
+      @keyframes s1 { 0%,9%,96%,100% { opacity: 1; } 11%,94% { opacity: 0; } }
+      @keyframes s2 { 0%,100% { opacity: 0; } 12%,20% { opacity: 1; } 22%,98% { opacity: 0; } }
+      @keyframes s3 { 0%,100% { opacity: 0; } 22%,30% { opacity: 1; } 32%,98% { opacity: 0; } }
+      @keyframes s4 { 0%,100% { opacity: 0; } 32%,40% { opacity: 1; } 42%,98% { opacity: 0; } }
+      @keyframes s5 { 0%,100% { opacity: 0; } 42%,50% { opacity: 1; } 52%,98% { opacity: 0; } }
+      @keyframes s6 { 0%,100% { opacity: 0; } 52%,60% { opacity: 1; } 62%,98% { opacity: 0; } }
+      @keyframes s7 { 0%,100% { opacity: 0; } 62%,70% { opacity: 1; } 72%,98% { opacity: 0; } }
+      @keyframes s8 { 0%,100% { opacity: 0; } 72%,92% { opacity: 1; } 94%,98% { opacity: 0; } }
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+    </style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+  <text x="32" y="38" fill="#94a3b8" font-size="16" class="mono">temperatures = [73,74,75,71,69,72,76,73]</text>
+  <text class="s1 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 1 / 8</text>
+  <text class="s2 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 2 / 8</text>
+  <text class="s3 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 3 / 8</text>
+  <text class="s4 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 4 / 8</text>
+  <text class="s5 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 5 / 8</text>
+  <text class="s6 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 6 / 8</text>
+  <text class="s7 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 7 / 8</text>
+  <text class="s8 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 8 / 8</text>
+  <g class="mono" text-anchor="middle" font-size="18">
+    <g transform="translate(30 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">73</text><text x="22" y="78" fill="#94a3b8" font-size="14">0</text></g>
+    <g transform="translate(84 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">74</text><text x="22" y="78" fill="#94a3b8" font-size="14">1</text></g>
+    <g transform="translate(138 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">75</text><text x="22" y="78" fill="#94a3b8" font-size="14">2</text></g>
+    <g transform="translate(192 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">71</text><text x="22" y="78" fill="#94a3b8" font-size="14">3</text></g>
+    <g transform="translate(246 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">69</text><text x="22" y="78" fill="#94a3b8" font-size="14">4</text></g>
+    <g transform="translate(300 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">72</text><text x="22" y="78" fill="#94a3b8" font-size="14">5</text></g>
+    <g transform="translate(354 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">76</text><text x="22" y="78" fill="#94a3b8" font-size="14">6</text></g>
+    <g transform="translate(408 100)"><rect width="44" height="58" rx="8" fill="#1e293b" stroke="#475569"/><text x="22" y="36">73</text><text x="22" y="78" fill="#94a3b8" font-size="14">7</text></g>
+  </g>
+  <g class="pointer"><path d="M52 90 L44 74 H60 Z" fill="#38bdf8"/></g>
+  <rect x="480" y="70" width="275" height="168" rx="14" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="617" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">unresolved stack · result</text>
+  <g class="s1 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[73@0]</text><text x="617" y="185" fill="#22c55e">[0,0,0,0,0,0,0,0]</text></g>
+  <g class="s2 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[74@1]</text><text x="617" y="185" fill="#22c55e">[1,0,0,0,0,0,0,0]</text></g>
+  <g class="s3 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[75@2]</text><text x="617" y="185" fill="#22c55e">[1,1,0,0,0,0,0,0]</text></g>
+  <g class="s4 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[75@2,71@3]</text><text x="617" y="185" fill="#22c55e">[1,1,0,0,0,0,0,0]</text></g>
+  <g class="s5 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[75@2,71@3,69@4]</text><text x="617" y="185" fill="#22c55e">[1,1,0,0,0,0,0,0]</text></g>
+  <g class="s6 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[75@2,72@5]</text><text x="617" y="185" fill="#22c55e">[1,1,0,2,1,0,0,0]</text></g>
+  <g class="s7 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[76@6]</text><text x="617" y="185" fill="#22c55e">[1,1,4,2,1,1,0,0]</text></g>
+  <g class="s8 mono" text-anchor="middle" font-size="14"><text x="617" y="145">[76@6,73@7]</text><text x="617" y="185" fill="#22c55e">[1,1,4,2,1,1,0,0]</text></g>
+  <rect x="40" y="270" width="720" height="58" rx="12" fill="#1e293b"/>
+  <g class="s1"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="16" class="mono">i=0: push {73,0}</text></g>
+  <g class="s2"><text x="400" y="306" text-anchor="middle" fill="#f59e0b" font-size="16" class="mono">74 pops index 0 (1 day); push {74,1}</text></g>
+  <g class="s3"><text x="400" y="306" text-anchor="middle" fill="#f59e0b" font-size="16" class="mono">75 pops index 1 (1 day); push {75,2}</text></g>
+  <g class="s4"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="16" class="mono">71 is not warmer than 75; push {71,3}</text></g>
+  <g class="s5"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="16" class="mono">69 is not warmer than 71; push {69,4}</text></g>
+  <g class="s6"><text x="400" y="306" text-anchor="middle" fill="#f59e0b" font-size="16" class="mono">72 pops 69 (1 day) and 71 (2 days)</text></g>
+  <g class="s7"><text x="400" y="306" text-anchor="middle" fill="#f59e0b" font-size="16" class="mono">76 pops 72 (1 day) and 75 (4 days)</text></g>
+  <g class="s8"><text x="400" y="306" text-anchor="middle" fill="#22c55e" font-size="16" class="mono">73 stays under 76; unresolved results remain 0</text></g>
+  <text x="400" y="348" text-anchor="middle" fill="#22c55e" font-size="15" class="mono">return [1,1,4,2,1,1,0,0] · loop 14s</text>
+</svg>

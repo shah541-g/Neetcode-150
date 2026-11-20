@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>LRU Cache overview</title>
+  <defs>
+    <style>
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+
+      .pulse { animation: pulse 6s infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes pulse { 0%,100% { opacity:.82 } 50% { opacity:1 } }
+
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+
+  <text x="400" y="40" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700">LRU Cache</text>
+  <g class="pulse">
+    <rect x="45" y="105" width="205" height="118" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <text x="147" y="136" text-anchor="middle" fill="#94a3b8" font-size="16">CODE STATE</text>
+    <text x="147" y="176" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="700" class="mono">map + recency list</text>
+  </g>
+  <path d="M250 164 H300" fill="none" stroke="#38bdf8" stroke-width="5"/>
+  <rect x="300" y="105" width="205" height="118" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="3"/>
+  <text x="402" y="136" text-anchor="middle" fill="#94a3b8" font-size="16">KEY IDEA</text>
+  <text x="402" y="176" text-anchor="middle" fill="#e2e8f0" font-size="21" font-weight="700" class="mono">LRU list</text>
+  <path d="M505 164 H555" fill="none" stroke="#22c55e" stroke-width="5"/>
+  <rect x="555" y="105" width="200" height="118" rx="16" fill="#1e293b" stroke="#22c55e" stroke-width="3"/>
+  <text x="655" y="136" text-anchor="middle" fill="#94a3b8" font-size="16">RESULT</text>
+  <text x="655" y="176" text-anchor="middle" fill="#22c55e" font-size="21" font-weight="700" class="mono">evict 2</text>
+  <rect x="55" y="260" width="690" height="58" rx="12" fill="#1e293b"/>
+  <text x="400" y="296" text-anchor="middle" fill="#94a3b8" font-size="17">Tail is most recent; head next is LRU</text>
+
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Merge K Sorted Lists dry run</title>
+  <defs>
+    <style>
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+      .s0,.s1,.s2,.s3,.s4 { opacity: 0; }
+      .s0 { animation: s0 14s infinite; }
+      .s1 { animation: s1 14s infinite; }
+      .s2 { animation: s2 14s infinite; }
+      .s3 { animation: s3 14s infinite; }
+      .s4 { animation: s4 14s infinite; }
+      @keyframes s0 { 0%,1%,13%,100% { opacity: 1; } 14%,99% { opacity: 0; } }
+      @keyframes s1 { 0%,15% { opacity: 0; } 16%,29% { opacity: 1; } 30%,100% { opacity: 0; } }
+      @keyframes s2 { 0%,31% { opacity: 0; } 32%,45% { opacity: 1; } 46%,100% { opacity: 0; } }
+      @keyframes s3 { 0%,47% { opacity: 0; } 48%,63% { opacity: 1; } 64%,100% { opacity: 0; } }
+      @keyframes s4 { 0%,65% { opacity: 0; } 66%,94% { opacity: 1; } 95%,100% { opacity: 0; } }
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+    </style>
+    <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+  <text x="32" y="38" fill="#94a3b8" font-size="16" class="mono">lists=[[1,4,5],[1,3,4],[2,6]]</text>
+  <g class="s0"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 1 / 5</text></g>
+  <g class="s1"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 2 / 5</text></g>
+  <g class="s2"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 3 / 5</text></g>
+  <g class="s3"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 4 / 5</text></g>
+  <g class="s4"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 5 / 5</text></g>
+  <g class="mono" font-size="16" fill="#94a3b8">
+    <text x="40" y="100">L0</text><text x="40" y="158">L1</text><text x="40" y="216">L2</text>
+  </g>
+  <g fill="#1e293b" stroke="#475569" stroke-width="2">
+    <rect x="82" y="70" width="56" height="42" rx="8"/><rect x="146" y="70" width="56" height="42" rx="8"/><rect x="210" y="70" width="56" height="42" rx="8"/>
+    <rect x="82" y="128" width="56" height="42" rx="8"/><rect x="146" y="128" width="56" height="42" rx="8"/><rect x="210" y="128" width="56" height="42" rx="8"/>
+    <rect x="82" y="186" width="56" height="42" rx="8"/><rect x="146" y="186" width="56" height="42" rx="8"/>
+  </g>
+  <g class="mono" font-size="18" fill="#e2e8f0" text-anchor="middle">
+    <text x="110" y="98">1</text><text x="174" y="98">4</text><text x="238" y="98">5</text>
+    <text x="110" y="156">1</text><text x="174" y="156">3</text><text x="238" y="156">4</text>
+    <text x="110" y="214">2</text><text x="174" y="214">6</text>
+  </g>
+  <rect x="320" y="70" width="440" height="168" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="540" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">PAIRWISE MERGE STATE</text>
+  <g class="s0"><text x="540" y="143" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">merge L0=[1,4,5] with L1=[1,3,4]</text></g>
+  <g class="s1"><text x="540" y="143" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">L1's 1 wins tie; merged=[1,1,3,4,4,5]</text></g>
+  <g class="s2"><text x="540" y="143" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">carry unmatched L2=[2,6]</text></g>
+  <g class="s3"><text x="540" y="139" text-anchor="middle" fill="#e2e8f0" font-size="15" class="mono">merge [1,1,3,4,4,5] with [2,6]</text><text x="540" y="166" text-anchor="middle" fill="#e2e8f0" font-size="15" class="mono">choose smaller head; append remaining chain</text></g>
+  <g class="s4"><text x="540" y="143" text-anchor="middle" fill="#22c55e" font-size="16" class="mono">[1,1,2,3,4,4,5,6]</text></g>
+  <rect x="40" y="270" width="720" height="56" rx="12" fill="#1e293b"/>
+  <g class="s0"><text x="400" y="304" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">Round 1 pairs lists[0] and lists[1]</text></g>
+  <g class="s1"><text x="400" y="304" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">Build the merged head; re-use input nodes</text></g>
+  <g class="s2"><text x="400" y="304" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">Odd list carries to the next round unchanged</text></g>
+  <g class="s3"><text x="400" y="304" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">Round 2 merges the two remaining chains</text></g>
+  <g class="s4"><text x="400" y="304" text-anchor="middle" fill="#22c55e" font-size="17" class="mono">Return [1,1,2,3,4,4,5,6]</text></g>
+</svg>

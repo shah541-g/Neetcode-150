@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="title desc">
+  <title id="title">Group Anagrams overview</title>
+  <desc id="desc">The code counts all 26 lowercase letters, serializes the counts, and groups identical keys.</desc>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <style>
+    text { font-family: sans-serif; fill: #e2e8f0 }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace }
+    .key { animation: pulse 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center }
+    @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .72 } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <text x="40" y="42" font-size="20" font-weight="700">Equal letter counts → equal signature</text>
+  <text x="40" y="82" font-size="14" fill="#94a3b8">getCode: count 26 letters, then serialize each count</text>
+  <g transform="translate(40 108)">
+    <rect width="310" height="44" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="155" y="28" text-anchor="middle" font-size="18" class="mono">eat  tea  ate</text>
+  </g>
+  <g class="key" transform="translate(40 176)">
+    <rect width="310" height="64" rx="9" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="155" y="26" text-anchor="middle" font-size="14" fill="#94a3b8">26 counts joined with #</text>
+    <text x="155" y="51" text-anchor="middle" font-size="15" class="mono">1#0#0#0#1#…1#…</text>
+  </g>
+  <path d="M195 220 C195 246 195 255 195 276" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="5 5"/>
+  <text x="195" y="306" text-anchor="middle" font-size="14" fill="#38bdf8">same key, same group</text>
+  <g transform="translate(430 100)">
+    <text x="0" y="14" transform="translate(0 -30)" font-size="16" font-weight="700">anagramsGroups</text>
+    <rect width="330" height="70" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="20" y="25" font-size="14" fill="#94a3b8" class="mono">signature A</text>
+    <text x="20" y="50" font-size="17" fill="#22c55e" class="mono">eat, tea, ate</text>
+    <rect y="80" width="330" height="70" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="20" y="105" font-size="14" fill="#94a3b8" class="mono">signature B</text>
+    <text x="20" y="130" font-size="17" fill="#22c55e" class="mono">tan, nat</text>
+    <rect y="160" width="330" height="70" rx="9" fill="#1e293b" stroke="#475569"/>
+    <text x="20" y="185" font-size="14" fill="#94a3b8" class="mono">signature C</text>
+    <text x="20" y="210" font-size="17" fill="#22c55e" class="mono">bat</text>
+  </g>
+  <text x="195" y="344" text-anchor="middle" font-size="14" fill="#94a3b8">Output group order is unspecified</text>
+</svg>

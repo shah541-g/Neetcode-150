@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Animated dry run of Buy and Sell Stock on 7,1,5,3,6,4</title>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <text x="40" y="38" fill="#e2e8f0" font-family="sans-serif" font-size="18" font-weight="700">prices = [7, 1, 5, 3, 6, 4]</text>
+  <text class="c1" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 1 / 6</text>
+  <text class="c2" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 2 / 6</text>
+  <text class="c3" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 3 / 6</text>
+  <text class="c4" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 4 / 6</text>
+  <text class="c5" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 5 / 6</text>
+  <text class="c6" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 6 / 6</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" text-anchor="middle">
+    <g transform="translate(72 72)"><rect width="72" height="58" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="36" y="37" fill="#e2e8f0">7</text></g>
+    <g transform="translate(154 72)"><rect width="72" height="58" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="36" y="37" fill="#e2e8f0">1</text></g>
+    <g transform="translate(236 72)"><rect width="72" height="58" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="36" y="37" fill="#e2e8f0">5</text></g>
+    <g transform="translate(318 72)"><rect width="72" height="58" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="36" y="37" fill="#e2e8f0">3</text></g>
+    <g transform="translate(400 72)"><rect width="72" height="58" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="36" y="37" fill="#e2e8f0">6</text></g>
+    <g transform="translate(482 72)"><rect width="72" height="58" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="36" y="37" fill="#e2e8f0">4</text></g>
+  </g>
+  <g id="price-pointer" fill="#38bdf8">
+    <path d="M108 153 l-9 14 h18 z"/>
+    <text x="108" y="184" fill="#38bdf8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" text-anchor="middle">price</text>
+  </g>
+  <rect x="604" y="72" width="156" height="76" rx="10" fill="#1e293b" stroke="#475569"/>
+  <text x="622" y="96" fill="#94a3b8" font-family="sans-serif" font-size="14">minPrice</text>
+  <text x="622" y="132" fill="#38bdf8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="24">1</text>
+  <rect x="604" y="158" width="156" height="76" rx="10" fill="#1e293b" stroke="#475569"/>
+  <text x="622" y="182" fill="#94a3b8" font-family="sans-serif" font-size="14">maxProfit</text>
+  <text x="622" y="218" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="24">5</text>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle">
+    <text class="c1" x="400" y="280" fill="#e2e8f0">price 7: minPrice = 7, maxProfit = 0</text>
+    <text class="c2" x="400" y="280" fill="#38bdf8">price 1 lowers minPrice from 7 to 1</text>
+    <text class="c3" x="400" y="280" fill="#e2e8f0">sell at 5: 5 - 1 = 4</text>
+    <text class="c4" x="400" y="280" fill="#e2e8f0">sell at 3: profit stays 4</text>
+    <text class="c5" x="400" y="280" fill="#22c55e">sell at 6: 6 - 1 = 5, set maxProfit</text>
+    <text class="c6" x="400" y="280" fill="#22c55e">price 4: maxProfit stays 5</text>
+  </g>
+  <text x="400" y="328" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="middle">Return maxProfit = 5 · loop: 14 seconds</text>
+  <style>
+    :root { --total:14s }
+    #price-pointer { animation:pointer var(--total) linear infinite; transform-box:fill-box; transform-origin:center }
+    .c1,.c2,.c3,.c4,.c5,.c6 { opacity:0 }
+    .c1{animation:c1 var(--total) infinite}.c2{animation:c2 var(--total) infinite}.c3{animation:c3 var(--total) infinite}.c4{animation:c4 var(--total) infinite}.c5{animation:c5 var(--total) infinite}.c6{animation:c6 var(--total) infinite}
+    @keyframes pointer { 0%,14%{transform:translateX(0)} 16%,28%{transform:translateX(82px)} 30%,44%{transform:translateX(164px)} 46%,60%{transform:translateX(246px)} 62%,76%{transform:translateX(328px)} 78%,92%{transform:translateX(410px)}94%{transform:translateX(410px)}100%{transform:translateX(0)} }
+    @keyframes c1 {0%,13%{opacity:1}15%{opacity:0}100%{opacity:1}}
+    @keyframes c2 {0%,15%{opacity:0}17%,28%{opacity:1}30%,100%{opacity:0}}
+    @keyframes c3 {0%,29%{opacity:0}31%,44%{opacity:1}46%,100%{opacity:0}}
+    @keyframes c4 {0%,45%{opacity:0}47%,60%{opacity:1}62%,100%{opacity:0}}
+    @keyframes c5 {0%,61%{opacity:0}63%,76%{opacity:1}78%,100%{opacity:0}}
+    @keyframes c6 {0%,77%{opacity:0}79%,92%{opacity:1}94%,100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+  </style>
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+</svg>

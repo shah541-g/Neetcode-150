@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Running minimum and running profit for Buy and Sell Stock</title>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <text x="40" y="42" fill="#e2e8f0" font-family="sans-serif" font-size="20" font-weight="700">Key idea: at each sell, use the lowest prior price</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" text-anchor="middle">
+    <g transform="translate(82 92)">
+      <rect width="86" height="62" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+      <text x="43" y="39" fill="#e2e8f0">7</text>
+    </g>
+    <g transform="translate(180 92)">
+      <g class="pulse">
+        <rect width="86" height="62" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+        <text x="43" y="39" fill="#38bdf8" font-weight="700">1</text>
+      </g>
+    </g>
+    <g transform="translate(278 92)">
+      <rect width="86" height="62" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+      <text x="43" y="39" fill="#e2e8f0">5</text>
+    </g>
+    <g transform="translate(376 92)">
+      <rect width="86" height="62" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+      <text x="43" y="39" fill="#e2e8f0">3</text>
+    </g>
+    <g transform="translate(474 92)">
+      <rect width="86" height="62" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="3"/>
+      <text x="43" y="39" fill="#22c55e" font-weight="700">6</text>
+    </g>
+    <g transform="translate(572 92)">
+      <rect width="86" height="62" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+      <text x="43" y="39" fill="#e2e8f0">4</text>
+    </g>
+  </g>
+  <path d="M223 176 C223 210 517 210 517 176" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="7 7"/>
+  <text x="223" y="198" fill="#38bdf8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" text-anchor="middle">buy at 1</text>
+  <text x="517" y="198" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" text-anchor="middle">sell at 6</text>
+  <rect x="250" y="230" width="300" height="76" rx="12" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+  <text x="400" y="259" fill="#94a3b8" font-family="sans-serif" font-size="16" text-anchor="middle">profit</text>
+  <text x="400" y="294" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="32" font-weight="700" text-anchor="middle">6 - 1 = 5</text>
+  <style>
+    .pulse { animation:pulse 6s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
+    @media (prefers-reduced-motion: reduce) { * { animation:none !important } }
+  </style>
+</svg>

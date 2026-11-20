@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="title desc">
+  <title id="title">Top K frequent elements overview</title>
+  <desc id="desc">Count values, then keep the k most frequent pairs in a min-heap by removing the smallest frequency.</desc>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <style>
+    text { font-family: sans-serif; fill: #e2e8f0 }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace }
+    .heap { animation: glow 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center }
+    @keyframes glow {0%,100%{opacity:1}50%{opacity:.72}}
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <text x="40" y="42" font-size="20" font-weight="700">Count → push {frequency, value} → bound heap</text>
+  <g transform="translate(40 82)">
+    <text y="14" transform="translate(0 -24)" font-size="15" fill="#94a3b8">nums</text>
+    <rect width="55" height="52" rx="8" fill="#1e293b" stroke="#475569"/><text x="27" y="34" text-anchor="middle" font-size="18" class="mono">1</text>
+    <rect x="66" width="55" height="52" rx="8" fill="#1e293b" stroke="#475569"/><text x="93" y="34" text-anchor="middle" font-size="18" class="mono">1</text>
+    <rect x="132" width="55" height="52" rx="8" fill="#1e293b" stroke="#475569"/><text x="159" y="34" text-anchor="middle" font-size="18" class="mono">1</text>
+    <rect x="198" width="55" height="52" rx="8" fill="#1e293b" stroke="#475569"/><text x="225" y="34" text-anchor="middle" font-size="18" class="mono">2</text>
+    <rect x="264" width="55" height="52" rx="8" fill="#1e293b" stroke="#475569"/><text x="291" y="34" text-anchor="middle" font-size="18" class="mono">2</text>
+    <rect x="330" width="55" height="52" rx="8" fill="#1e293b" stroke="#475569"/><text x="357" y="34" text-anchor="middle" font-size="18" class="mono">3</text>
+  </g>
+  <path d="M215 144 C215 165 215 174 215 192" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <g transform="translate(40 210)">
+    <rect width="300" height="106" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="18" y="28" font-size="15" fill="#94a3b8">numsFreqMapper</text>
+    <text x="18" y="58" font-size="17" class="mono">1 : 3</text>
+    <text x="115" y="58" font-size="17" class="mono">2 : 2</text>
+    <text x="212" y="58" font-size="17" class="mono">3 : 1</text>
+  </g>
+  <g class="heap" transform="translate(430 82)">
+    <text y="14" transform="translate(0 -24)" font-size="16" font-weight="700">minHeap (k = 2)</text>
+    <rect y="8" width="330" height="58" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="165" y="43" text-anchor="middle" font-size="18" class="mono">(2,2)  (3,1)</text>
+    <text x="165" y="84" text-anchor="middle" font-size="14" fill="#94a3b8">top = least frequent retained pair</text>
+  </g>
+  <path d="M495 218 C495 250 495 260 495 278" fill="none" stroke="#22c55e" stroke-width="3"/>
+  <g transform="translate(430 286)">
+    <rect width="330" height="46" rx="8" fill="#22c55e"/>
+    <text x="165" y="31" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a" class="mono">ans = [2, 1]</text>
+  </g>
+</svg>

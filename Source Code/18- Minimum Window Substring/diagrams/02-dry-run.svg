@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Animated dry run of Minimum Window Substring on ADOBECODEBANC</title>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <text x="40" y="38" fill="#e2e8f0" font-family="sans-serif" font-size="18" font-weight="700">s = "ADOBECODEBANC", t = "ABC"</text>
+  <text class="c1" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 1 / 5</text>
+  <text class="c2" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 2 / 5</text>
+  <text class="c3" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 3 / 5</text>
+  <text class="c4" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 4 / 5</text>
+  <text class="c5" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 5 / 5</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="17" text-anchor="middle">
+    <g transform="translate(35 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#e2e8f0">A</text></g>
+    <g transform="translate(91 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">D</text></g>
+    <g transform="translate(147 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">O</text></g>
+    <g transform="translate(203 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#f59e0b">B</text></g>
+    <g transform="translate(259 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">E</text></g>
+    <g transform="translate(315 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#22c55e">C</text></g>
+    <g transform="translate(371 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">O</text></g>
+    <g transform="translate(427 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">D</text></g>
+    <g transform="translate(483 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">E</text></g>
+    <g transform="translate(539 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#f59e0b">B</text></g>
+    <g transform="translate(595 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#38bdf8">A</text></g>
+    <g transform="translate(651 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#475569"/><text x="26" y="37" fill="#94a3b8">N</text></g>
+    <g transform="translate(707 82)"><rect width="52" height="58" rx="7" fill="#1e293b" stroke="#22c55e"/><text x="26" y="37" fill="#22c55e">C</text></g>
+  </g>
+  <rect id="window" x="25" y="72" width="352" height="78" rx="10" fill="#38bdf8" fill-opacity=".07" stroke="#38bdf8" stroke-width="3"/>
+  <text x="25" y="176" fill="#38bdf8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14">l</text>
+  <text x="376" y="176" fill="#f59e0b" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14">r</text>
+  <rect x="35" y="218" width="730" height="66" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="55" y="243" fill="#94a3b8" font-family="sans-serif" font-size="14">created</text>
+  <text x="55" y="272" fill="#a78bfa" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="18">A  B  C</text>
+  <text x="340" y="243" fill="#94a3b8" font-family="sans-serif" font-size="14">best window seen</text>
+  <text class="c2" x="340" y="272" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20">ADOBEC (len 6)</text>
+  <text class="c5" x="340" y="272" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20">BANC (len 4)</text>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle">
+    <text class="c1" x="400" y="320" fill="#38bdf8">expand right: collect A, B, C</text>
+    <text class="c2" x="400" y="320" fill="#22c55e">window ADOBEC is valid; record len 6</text>
+    <text class="c3" x="400" y="320" text-anchor="middle" fill="#f59e0b">shrink left until a required count becomes deficient</text>
+    <text class="c4" x="400" y="320" fill="#38bdf8">continue expanding through B and A</text>
+    <text class="c5" x="400" y="320" fill="#22c55e">return "BANC" (len 4)</text>
+  </g>
+  <style>
+    :root{--total:14s}
+    #window{animation:window var(--total) linear infinite;transform-box:fill-box;transform-origin:center}
+    .c1,.c2,.c3,.c4,.c5{opacity:0}
+    .c1{animation:c1 var(--total) infinite}.c2{animation:c2 var(--total) infinite}.c3{animation:c3 var(--total) infinite}.c4{animation:c4 var(--total) infinite}.c5{animation:c5 var(--total) infinite}
+    @keyframes window{0%,18%{transform:translateX(0)}20%,36%{transform:translateX(0)}38%,54%{transform:translateX(56px)}56%,72%{transform:translateX(224px)}74%,94%{transform:translateX(504px)}96%{transform:translateX(504px)}100%{transform:translateX(0)}}
+    @keyframes c1{0%,18%{opacity:1}20%{opacity:0}100%{opacity:1}}@keyframes c2{0%,20%{opacity:0}22%,36%{opacity:1}38%,100%{opacity:0}}@keyframes c3{0%,38%{opacity:0}40%,54%{opacity:1}56%,100%{opacity:0}}@keyframes c4{0%,56%{opacity:0}58%,72%{opacity:1}74%,100%{opacity:0}}@keyframes c5{0%,74%{opacity:0}76%,94%{opacity:1}96%,100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+  </style>
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+</svg>

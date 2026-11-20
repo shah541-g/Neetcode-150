@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Animated dry run of Longest Repeating Character Replacement on ABAB</title>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <text x="40" y="38" fill="#e2e8f0" font-family="sans-serif" font-size="18" font-weight="700">s = "ABAB", k = 2</text>
+  <text class="c1" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 1 / 4</text>
+  <text class="c2" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 2 / 4</text>
+  <text class="c3" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 3 / 4</text>
+  <text class="c4" x="750" y="38" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="end">Step 4 / 4</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="22" text-anchor="middle">
+    <g transform="translate(90 82)"><rect width="82" height="62" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="41" y="40" fill="#e2e8f0">A</text></g>
+    <g transform="translate(182 82)"><rect width="82" height="62" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="41" y="40" fill="#e2e8f0">B</text></g>
+    <g transform="translate(274 82)"><rect width="82" height="62" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="41" y="40" fill="#e2e8f0">A</text></g>
+    <g transform="translate(366 82)"><rect width="82" height="62" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="41" y="40" fill="#e2e8f0">B</text></g>
+  </g>
+  <g id="pointer"><path d="M131 170 l-9 14 h18 z" fill="#38bdf8"/><text x="131" y="202" fill="#38bdf8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" text-anchor="middle">right</text></g>
+  <rect x="510" y="82" width="240" height="132" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="630" y="108" fill="#94a3b8" font-family="sans-serif" font-size="15" text-anchor="middle">window counts</text>
+  <text x="630" y="145" fill="#38bdf8" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" text-anchor="middle">A / B</text>
+  <text x="630" y="180" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" text-anchor="middle">maxFreq</text>
+  <rect x="510" y="224" width="240" height="58" rx="10" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+  <text x="630" y="260" fill="#22c55e" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="22" text-anchor="middle">ans = 4</text>
+  <g font-family="sans-serif" font-size="16" text-anchor="middle">
+    <text class="c1" x="300" y="278" fill="#38bdf8">right 0: A count 1, maxFreq 1</text>
+    <text class="c2" x="300" y="278" fill="#f59e0b">right 1: B count 1, replacements 1</text>
+    <text class="c3" x="300" y="278" fill="#38bdf8">right 2: A count 2, maxFreq 2</text>
+    <text class="c4" x="300" y="278" fill="#22c55e">right 3: 4 - 2 = 2 replacements (k=2); ans 4</text>
+  </g>
+  <text x="400" y="328" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="middle">Return length = 4 · loop: 14 seconds</text>
+  <style>
+    :root{--total:14s}
+    #pointer{animation:pointer var(--total) linear infinite;transform-box:fill-box;transform-origin:center}
+    .c1,.c2,.c3,.c4{opacity:0}
+    .c1{animation:c1 var(--total) infinite}.c2{animation:c2 var(--total) infinite}.c3{animation:c3 var(--total) infinite}.c4{animation:c4 var(--total) infinite}
+    @keyframes pointer{0%,22%{transform:translateX(0)}24%,44%{transform:translateX(92px)}46%,66%{transform:translateX(184px)}68%,94%{transform:translateX(276px)}96%{transform:translateX(276px)}100%{transform:translateX(0)}}
+    @keyframes c1{0%,22%{opacity:1}24%{opacity:0}100%{opacity:1}}@keyframes c2{0%,24%{opacity:0}26%,44%{opacity:1}46%,100%{opacity:0}}@keyframes c3{0%,46%{opacity:0}48%,66%{opacity:1}68%,100%{opacity:0}}@keyframes c4{0%,68%{opacity:0}70%,94%{opacity:1}96%,100%{opacity:0}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+  </style>
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+</svg>

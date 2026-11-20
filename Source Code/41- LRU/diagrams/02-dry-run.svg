@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>LRU Cache animated dry run</title>
+  <defs>
+    <style>
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+:root { --total: 14s; }
+.p1 { animation: p1 var(--total) infinite; transform-box: fill-box; transform-origin: center; }
+.cap0,.state0,.step0 { animation: cap0 var(--total) infinite; }
+@keyframes cap0 { 0%,0.0%{opacity:0} 1.0%,11.7%{opacity:1} 12.7%,100%{opacity:0} }
+.cap1,.state1,.step1 { animation: cap1 var(--total) infinite; }
+@keyframes cap1 { 0%,11.7%{opacity:0} 12.7%,23.3%{opacity:1} 24.3%,100%{opacity:0} }
+.cap2,.state2,.step2 { animation: cap2 var(--total) infinite; }
+@keyframes cap2 { 0%,23.3%{opacity:0} 24.3%,35.0%{opacity:1} 36.0%,100%{opacity:0} }
+.cap3,.state3,.step3 { animation: cap3 var(--total) infinite; }
+@keyframes cap3 { 0%,35.0%{opacity:0} 36.0%,46.7%{opacity:1} 47.7%,100%{opacity:0} }
+.cap4,.state4,.step4 { animation: cap4 var(--total) infinite; }
+@keyframes cap4 { 0%,46.7%{opacity:0} 47.7%,58.3%{opacity:1} 59.3%,100%{opacity:0} }
+.cap5,.state5,.step5 { animation: cap5 var(--total) infinite; }
+@keyframes cap5 { 0%,58.3%{opacity:0} 59.3%,70.0%{opacity:1} 71.0%,100%{opacity:0} }
+@keyframes p1 { 0%,100% { transform: translateX(0); 70%,100% { transform: translateX(0); } } 1.0%{transform:translateX(0px)} 11.7%{transform:translateX(0px)} 12.7%{transform:translateX(78px)} 23.3%{transform:translateX(78px)} 24.3%{transform:translateX(0px)} 35.0%{transform:translateX(0px)} 36.0%{transform:translateX(156px)} 46.7%{transform:translateX(156px)} 47.7%{transform:translateX(78px)} 58.3%{transform:translateX(78px)} 59.3%{transform:translateX(78px)} 70.0%{transform:translateX(78px)} }}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+    </style>
+    <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+<text x="32" y="38" fill="#94a3b8" font-size="16" class="mono">Tail is most recent; head next is LRU</text>
+<g class="step0"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 1 / 6</text></g>
+<g class="step1"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 2 / 6</text></g>
+<g class="step2"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 3 / 6</text></g>
+<g class="step3"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 4 / 6</text></g>
+<g class="step4"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 5 / 6</text></g>
+<g class="step5"><text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 6 / 6</text></g>
+<g><rect x="38" y="112" width="62" height="68" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="69" y="152" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700" class="mono">1</text><path d="M100 146 H116" fill="none" stroke="#94a3b8" stroke-width="3"/><rect x="116" y="112" width="62" height="68" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="147" y="152" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700" class="mono">2</text><path d="M178 146 H194" fill="none" stroke="#94a3b8" stroke-width="3"/><rect x="194" y="112" width="62" height="68" rx="12" fill="#1e293b" stroke="#475569" stroke-width="2"/><text x="225" y="152" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700" class="mono">3</text></g><rect x="585" y="70" width="170" height="168" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/><text x="670" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">DATA STATE</text><g class="state0"><text x="670" y="145" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">put 1</text></g><g class="state1"><text x="670" y="145" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">put 2</text></g><g class="state2"><text x="670" y="145" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">get 1</text></g><g class="state3"><text x="670" y="145" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">put 3</text></g><g class="state4"><text x="670" y="145" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">evict 2</text></g><g class="state5"><text x="670" y="145" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">get 2=-1</text></g><g class="p1"><path d="M69 68 L69 50" stroke="#38bdf8" stroke-width="4"/><text x="69" y="44" text-anchor="middle" fill="#38bdf8" font-size="14">i</text></g>
+  <rect x="55" y="270" width="690" height="58" rx="12" fill="#1e293b"/>
+<g class="cap0"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">insert recent</text></g>
+<g class="cap1"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">insert recent</text></g>
+<g class="cap2"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">move 1 to tail</text></g>
+<g class="cap3"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">size exceeds capacity</text></g>
+<g class="cap4"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">remove head next</text></g>
+<g class="cap5"><text x="400" y="306" text-anchor="middle" fill="#22c55e" font-size="18" class="mono">get(2) returns -1</text></g>
+
+</svg>

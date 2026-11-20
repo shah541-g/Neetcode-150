@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Valid Parentheses dry run</title>
+  <desc>For ([)], the stack top mismatches the expected opener at index 2, so the final bracket is not read.</desc>
+  <defs>
+    <style>
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+      :root { --total: 14s; }
+      .pointer { animation: pointer var(--total) linear infinite; transform-box: fill-box; transform-origin: center; }
+      .s1,.s2,.s3 { opacity: 0; animation-duration: var(--total); animation-iteration-count: infinite; }
+      .s1 { animation-name: s1; } .s2 { animation-name: s2; } .s3 { animation-name: s3; }
+      @keyframes pointer {
+        0%,1% { transform: translateX(0); opacity: 0; }
+        2%,10% { transform: translateX(0); opacity: 1; }
+        12%,20% { transform: translateX(60px); opacity: 1; }
+        22%,90% { transform: translateX(120px); opacity: 1; }
+        96% { transform: translateX(120px); opacity: 0; }
+        100% { transform: translateX(0); opacity: 0; }
+      }
+      @keyframes s1 { 0%,9%,96%,100% { opacity: 1; } 11%,94% { opacity: 0; } }
+      @keyframes s2 { 0%,100% { opacity: 0; } 12%,20% { opacity: 1; } 22%,98% { opacity: 0; } }
+      @keyframes s3 { 0%,100% { opacity: 0; } 22%,92% { opacity: 1; } 94%,98% { opacity: 0; } }
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+    </style>
+    <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+  <text x="32" y="38" fill="#94a3b8" font-size="16" class="mono">s = "([)]"</text>
+  <text class="s1 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 1 / 3</text>
+  <text class="s2 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 2 / 3</text>
+  <text class="s3 mono" x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Step 3 / 3</text>
+  <g class="mono" text-anchor="middle" font-size="22">
+    <g transform="translate(40 112)"><rect width="50" height="62" rx="8" fill="#1e293b" stroke="#475569"/><text x="25" y="40">(</text><text x="25" y="82" fill="#94a3b8" font-size="14">0</text></g>
+    <g transform="translate(100 112)"><rect width="50" height="62" rx="8" fill="#1e293b" stroke="#475569"/><text x="25" y="40">[</text><text x="25" y="82" fill="#94a3b8" font-size="14">1</text></g>
+    <g transform="translate(160 112)"><rect width="50" height="62" rx="8" fill="#1e293b" stroke="#475569"/><text x="25" y="40">)</text><text x="25" y="82" fill="#94a3b8" font-size="14">2</text></g>
+    <g transform="translate(220 112)"><rect width="50" height="62" rx="8" fill="#1e293b" stroke="#475569"/><text x="25" y="40">]</text><text x="25" y="82" fill="#94a3b8" font-size="14">3</text></g>
+  </g>
+  <g class="pointer"><path d="M65 98 L57 82 H73 Z" fill="#38bdf8"/></g>
+  <rect x="550" y="70" width="205" height="168" rx="14" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="652" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">parenthesesStack</text>
+  <g class="s1 mono" text-anchor="middle" font-size="16"><text x="652" y="145">[(]</text><text x="652" y="185" fill="#38bdf8">push opener</text></g>
+  <g class="s2 mono" text-anchor="middle" font-size="16"><text x="652" y="145">[(, []</text><text x="652" y="185" fill="#38bdf8">push opener</text></g>
+  <g class="s3 mono" text-anchor="middle" font-size="16"><text x="652" y="145">top = '['</text><text x="652" y="185" fill="#ef4444">expected '('</text></g>
+  <rect x="40" y="270" width="720" height="58" rx="12" fill="#1e293b"/>
+  <g class="s1"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="16" class="mono">i=0: '(' is not a closer; push it</text></g>
+  <g class="s2"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="16" class="mono">i=1: '[' is not a closer; push it</text></g>
+  <g class="s3"><text x="400" y="306" text-anchor="middle" fill="#ef4444" font-size="16" class="mono">i=2: ')' expects '('; top '[' mismatches</text></g>
+  <text x="400" y="348" text-anchor="middle" fill="#ef4444" font-size="15" class="mono">return false immediately; index 3 is never read · loop 14s</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  <title>Contains Duplicate animated dry run</title>
+  <style>g[class^="c"],text[class^="c"],g[class^="s"],text[class^="s"],g[class^="p"],text[class^="p"],g[class^="v"],text[class^="v"] { opacity:0; }</style>
+  <defs>
+    <style>
+      :root { --total: 14s; }
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+      .pointer { animation: pointer var(--total) infinite; transform-box: fill-box; transform-origin: center; }
+      .c1,.c2,.c3,.c4 { animation: step var(--total) infinite; }
+      .c1 { animation-delay: 0s } .c2 { animation-delay: 2.2s } .c3 { animation-delay: 4.4s } .c4 { animation-delay: 6.6s }
+      .row1,.row2,.row3 { transform-box: fill-box; transform-origin: left center; }
+      .row1 { animation: row1 var(--total) infinite; }
+      .row2 { animation: row2 var(--total) infinite; }
+      .row3 { animation: row3 var(--total) infinite; }
+      .answer { opacity:0; animation: answer var(--total) infinite; }
+      @keyframes pointer { 0%,18%{transform:translateX(0)} 20%,38%{transform:translateX(120px)} 40%,58%{transform:translateX(240px)} 60%,78%{transform:translateX(360px)}80%{transform:translateX(360px)}100%{transform:translateX(0)} }
+      @keyframes step { 0%,18%{opacity:1}20%{opacity:0}100%{opacity:1} }
+      @keyframes row1 { 0%,20%{opacity:0}22%,98%{opacity:1}100%{opacity:0} }
+      @keyframes row2 { 0%,40%{opacity:0}42%,98%{opacity:1}100%{opacity:0} }
+      @keyframes row3 { 0%,60%{opacity:0}62%,98%{opacity:1}100%{opacity:0} }
+      @keyframes answer { 0%,84%{opacity:0}86%,98%{opacity:1}100%{opacity:0} }
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+    </style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+  <text x="32" y="38" fill="#94a3b8" font-size="16">nums = [1, 2, 3, 1]</text>
+  <text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">Loop: n in nums</text>
+  <g class="c1"><text x="768" y="62" text-anchor="end" fill="#94a3b8" font-size="14">Step 1 / 4</text></g>
+  <g class="c2"><text x="768" y="62" text-anchor="end" fill="#94a3b8" font-size="14">Step 2 / 4</text></g>
+  <g class="c3"><text x="768" y="62" text-anchor="end" fill="#94a3b8" font-size="14">Step 3 / 4</text></g>
+  <g class="c4"><text x="768" y="62" text-anchor="end" fill="#94a3b8" font-size="14">Step 4 / 4</text></g>
+  <g>
+    <g transform="translate(55 78)">
+      <rect x="0" width="96" height="78" rx="12" fill="#1e293b" stroke="#475569"/>
+      <rect x="120" width="96" height="78" rx="12" fill="#1e293b" stroke="#475569"/>
+      <rect x="240" width="96" height="78" rx="12" fill="#1e293b" stroke="#475569"/>
+      <rect x="360" width="96" height="78" rx="12" fill="#1e293b" stroke="#475569"/>
+      <text x="48" y="49" text-anchor="middle" fill="#e2e8f0" font-size="28" class="mono">1</text>
+      <text x="168" y="49" text-anchor="middle" fill="#e2e8f0" font-size="28" class="mono">2</text>
+      <text x="288" y="49" text-anchor="middle" fill="#e2e8f0" font-size="28" class="mono">3</text>
+      <text x="408" y="49" text-anchor="middle" fill="#e2e8f0" font-size="28" class="mono">1</text>
+      <text x="48" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">0</text>
+      <text x="168" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">1</text>
+      <text x="288" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">2</text>
+      <text x="408" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">3</text>
+      <g class="pointer"><path d="M48 -10 L48 -28" stroke="#38bdf8" stroke-width="4"/><text x="48" y="14" transform="translate(0 -48)" text-anchor="middle" fill="#38bdf8" font-size="14">n</text></g>
+    </g>
+  </g>
+  <rect x="520" y="70" width="225" height="176" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="632" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">numsSet</text>
+  <g class="row1"><rect x="545" y="112" width="175" height="30" rx="7" fill="#0f172a"/><text x="632" y="133" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">1</text></g>
+  <g class="row2"><rect x="545" y="150" width="175" height="30" rx="7" fill="#0f172a"/><text x="632" y="171" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">2</text></g>
+  <g class="row3"><rect x="545" y="188" width="175" height="30" rx="7" fill="#0f172a"/><text x="632" y="209" text-anchor="middle" fill="#e2e8f0" font-size="16" class="mono">3</text></g>
+  <rect x="55" y="270" width="690" height="58" rx="12" fill="#1e293b"/>
+  <g class="c1"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">n = 1 → not seen → insert 1</text></g>
+  <g class="c2"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">n = 2 → not seen → insert 2</text></g>
+  <g class="c3"><text x="400" y="306" text-anchor="middle" fill="#38bdf8" font-size="18" class="mono">n = 3 → not seen → insert 3</text></g>
+  <g class="c4"><text x="400" y="306" text-anchor="middle" fill="#22c55e" font-size="18" class="mono">n = 1 → count found → return true</text></g>
+  <g class="answer"><text x="400" y="306" text-anchor="middle" fill="#22c55e" font-size="18" class="mono">return true</text></g>
+</svg>

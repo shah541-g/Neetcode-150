@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img">
+  <title>Valid Anagram animated dry run</title>
+  <defs>
+    <style>
+      :root { --total: 14s; }
+      * { font-family: ui-sans-serif, system-ui, sans-serif; }
+      .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+      .pointer { animation: pointer var(--total) infinite; transform-box: fill-box; transform-origin: center; }
+      .s0,.s1,.s2,.s3 { animation: caption var(--total) infinite; }
+      .s0 { animation-delay:0s } .s1 { animation-delay:2.4s } .s2 { animation-delay:4.8s } .s3 { animation-delay:7.2s }
+      @keyframes pointer { 0%,20%{transform:translateX(0)} 22%,42%{transform:translateX(90px)} 44%,64%{transform:translateX(180px)}66%{transform:translateX(180px)}100%{transform:translateX(0)} }
+      @keyframes caption { 0%,20%{opacity:1}22%{opacity:0}100%{opacity:1} }
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+    </style>
+    <style>* { animation-timing-function: steps(1, end) !important; } g[class^="c"],text[class^="c"],g[class^="s"],text[class^="s"] { opacity:0; } .answer { opacity:0; animation:answer var(--total) infinite; } @keyframes answer { 0%,84%{opacity:0} 86%,98%{opacity:1} 100%{opacity:0} }</style>
+  </defs>
+  <rect width="800" height="360" rx="24" fill="#0f172a"/>
+  <text x="32" y="38" fill="#94a3b8" font-size="16">s = abc, t = cab</text>
+  <text x="768" y="38" text-anchor="end" fill="#94a3b8" font-size="16">length = 3</text>
+  <g transform="translate(55 72)">
+    <text x="0" y="14" transform="translate(0 -26)" fill="#38bdf8" font-size="16" class="mono">s</text>
+    <rect x="0" width="72" height="58" rx="10" fill="#1e293b" stroke="#38bdf8"/>
+    <rect x="90" width="72" height="58" rx="10" fill="#1e293b" stroke="#475569"/>
+    <rect x="180" width="72" height="58" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="36" y="38" text-anchor="middle" fill="#e2e8f0" font-size="24" class="mono">a</text>
+    <text x="126" y="38" text-anchor="middle" fill="#e2e8f0" font-size="24" class="mono">b</text>
+    <text x="216" y="38" text-anchor="middle" fill="#e2e8f0" font-size="24" class="mono">c</text>
+    <text x="0" y="80" fill="#f59e0b" font-size="16" class="mono">t</text>
+    <rect x="0" y="94" width="72" height="58" rx="10" fill="#1e293b" stroke="#f59e0b"/>
+    <rect x="90" y="94" width="72" height="58" rx="10" fill="#1e293b" stroke="#475569"/>
+    <rect x="180" y="94" width="72" height="58" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="36" y="132" text-anchor="middle" fill="#e2e8f0" font-size="24" class="mono">c</text>
+    <text x="126" y="132" text-anchor="middle" fill="#e2e8f0" font-size="24" class="mono">a</text>
+    <text x="216" y="132" text-anchor="middle" fill="#e2e8f0" font-size="24" class="mono">b</text>
+    <g class="pointer"><path d="M36 -14 V-28" stroke="#38bdf8" stroke-width="4"/><text x="36" y="14" transform="translate(0 -48)" text-anchor="middle" fill="#38bdf8" font-size="14">i</text></g>
+  </g>
+  <rect x="420" y="58" width="325" height="194" rx="16" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+  <text x="582" y="86" text-anchor="middle" fill="#94a3b8" font-size="16">alphabetsFreq</text>
+  <g fill="#0f172a" stroke="#475569">
+    <rect x="445" y="104" width="88" height="48" rx="8"/><rect x="541" y="104" width="88" height="48" rx="8"/><rect x="637" y="104" width="88" height="48" rx="8"/>
+  </g>
+  <text x="489" y="134" text-anchor="middle" fill="#e2e8f0" font-size="20" class="mono">a:0</text>
+  <text x="585" y="134" text-anchor="middle" fill="#e2e8f0" font-size="20" class="mono">b:0</text>
+  <text x="681" y="134" text-anchor="middle" fill="#e2e8f0" font-size="20" class="mono">c:0</text>
+  <text x="582" y="180" text-anchor="middle" fill="#94a3b8" font-size="14">final counts after all pairs</text>
+  <rect x="445" y="190" width="280" height="42" rx="10" fill="#0f172a"/>
+  <text x="585" y="217" text-anchor="middle" fill="#22c55e" font-size="20" class="mono">scan: every n == 0</text>
+  <rect x="55" y="282" width="690" height="48" rx="12" fill="#1e293b"/>
+  <g class="s0"><text x="400" y="312" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">i=0: a++ and c--</text></g>
+  <g class="s1"><text x="400" y="312" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">i=1: b++ and a--</text></g>
+  <g class="s2"><text x="400" y="312" text-anchor="middle" fill="#38bdf8" font-size="17" class="mono">i=2: c++ and b--</text></g>
+  <g class="s3"><text x="400" y="312" text-anchor="middle" fill="#22c55e" font-size="17" class="mono">all 26 entries are zero → return true</text></g>
+  <g class="answer"><text x="400" y="312" text-anchor="middle" fill="#22c55e" font-size="17" class="mono">return true</text></g>
+</svg>

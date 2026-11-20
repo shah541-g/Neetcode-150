@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="title desc">
+  <title id="title">Valid Sudoku invalid row dry run</title>
+  <desc id="desc">Twelve-second dry run of the source first-row duplicate test, which sees the second 3 in row 0 and returns false.</desc>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <style>
+    text { font-family:sans-serif; fill:#e2e8f0 }
+    .mono { font-family:ui-monospace,Menlo,Consolas,monospace }
+    .scan { animation:scan 14s infinite; transform-box:fill-box; transform-origin:center }
+    .s1,.s2,.s3,.s4,.bad,.final {opacity:0}
+    .s1{animation:s1 14s infinite}.s2{animation:s2 14s infinite}.s3{animation:s3 14s infinite}.s4{animation:s4 14s infinite}.bad{animation:bad 14s infinite}.final{animation:final 14s infinite}
+    @keyframes scan{0%,8%{transform:translate(0,0)}10%,22%{transform:translate(30px,0)}24%,36%{transform:translate(120px,0)}38%,50%{transform:translate(210px,0)}52%{transform:translate(210px,0)}100%{transform:translate(0,0)}}
+    @keyframes s1{0%,8%{opacity:1}10%{opacity:0}100%{opacity:1}}@keyframes s2{0%,8%,24%,100%{opacity:0}10%,22%{opacity:1}}
+    @keyframes s3{0%,22%,38%,100%{opacity:0}24%,36%{opacity:1}}@keyframes s4{0%,36%,52%,100%{opacity:0}38%,50%{opacity:1}}
+    @keyframes bad{0%,50%,100%{opacity:0}52%,88%{opacity:1}}@keyframes final{0%,88%{opacity:.35}91%{opacity:1}100%{opacity:.35}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+  </style>
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  <text x="40" y="34" font-size="18" font-weight="700">Invalid row: duplicate at (0,7); dots grouped</text>
+  <text class="s1 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 1 / 4</text>
+  <text class="s2 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 2 / 4</text>
+  <text class="s3 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 3 / 4</text>
+  <text class="s4 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 4 / 4</text>
+  <g transform="translate(40 62)">
+    <rect width="270" height="270" rx="8" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+    <g stroke="#475569" stroke-width="1">
+      <path d="M30 0V270M60 0V270M90 0V270M120 0V270M150 0V270M180 0V270M210 0V270M240 0V270M270 0V270"/>
+      <path d="M0 30H270M0 60H270M0 90H270M0 120H270M0 150H270M0 180H270M0 210H270M0 240H270M0 270H270"/>
+    </g>
+    <g stroke="#94a3b8" stroke-width="3"><path d="M90 0V270M180 0V270M0 90H270M0 180H270"/></g>
+    <text x="15" y="21" text-anchor="middle" font-size="16" class="mono">5</text><text x="45" y="21" text-anchor="middle" font-size="16" class="mono">3</text>
+    <text x="135" y="21" text-anchor="middle" font-size="16" class="mono">7</text><text x="225" y="21" text-anchor="middle" font-size="16" class="mono">3</text>
+    <g class="scan"><rect width="30" height="30" rx="4" fill="none" stroke="#38bdf8" stroke-width="4"/></g>
+  </g>
+  <g transform="translate(350 62)">
+    <text y="14" transform="translate(0 -24)" font-size="16" font-weight="700">sets after each check</text>
+    <rect y="8" width="410" height="58" rx="8" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="16" y="34" font-size="14" fill="#94a3b8">rows[0]</text>
+    <text class="s1 mono" x="100" y="34" font-size="16">insert 5</text>
+    <text class="s2 mono" x="100" y="34" font-size="16">{5,3}</text>
+    <text class="s3 mono" x="100" y="34" font-size="16">row={5,3,7}</text>
+    <text class="s4 mono" x="100" y="34" font-size="16">check 3</text>
+    <text class="bad mono" x="100" y="34" font-size="16" fill="#ef4444">3 already exists</text>
+    <rect y="78" width="410" height="58" rx="8" fill="#1e293b" stroke="#f59e0b"/>
+    <text x="16" y="104" font-size="14" fill="#94a3b8">cols[j]</text><text x="100" y="104" font-size="16" class="mono">checked on each digit</text>
+    <rect y="148" width="410" height="58" rx="8" fill="#1e293b" stroke="#a78bfa"/>
+    <text x="16" y="174" font-size="14" fill="#94a3b8">boxes[b]</text><text x="100" y="174" font-size="16" class="mono">box=(i/3)*3+(j/3)</text>
+  </g>
+  <g transform="translate(350 274)">
+    <rect width="410" height="58" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text class="s1 mono" x="16" y="36" font-size="16">(0,0): 5 is new</text>
+    <text class="s2 mono" x="16" y="36" font-size="16">(0,1): 3 is new</text>
+    <text class="s3 mono" x="16" y="36" font-size="16">skip 2,3; insert 7; skip 5,6</text>
+    <text class="s4 mono" x="16" y="36" font-size="16">(0,7): val = 3</text>
+  </g>
+  <g class="final" transform="translate(350 345)">
+    <text font-size="18" fill="#ef4444" font-weight="700">rows[0].count(3) → return false</text>
+  </g>
+</svg>

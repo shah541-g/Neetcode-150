@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="title desc">
+  <title id="title">Product Except Self dry run</title>
+  <desc id="desc">Twelve-second dry run of prefix and suffix passes for nums 1,2,3,4.</desc>
+  <rect width="800" height="360" rx="18" fill="#0f172a"/>
+  <style>
+    text { font-family:sans-serif; fill:#e2e8f0 }
+    .mono { font-family:ui-monospace,Menlo,Consolas,monospace }
+    .ip { animation:ip 14s infinite; transform-box:fill-box; transform-origin:center }
+    .jp { animation:jp 14s infinite; transform-box:fill-box; transform-origin:center }
+    .p1,.p2,.p3,.p4,.s1,.s2,.s3,.s4,.final {opacity:0}
+    .p1{animation:p1 14s infinite}.p2{animation:p2 14s infinite}.p3{animation:p3 14s infinite}.p4{animation:p4 14s infinite}
+    .s1{animation:s1 14s infinite}.s2{animation:s2 14s infinite}.s3{animation:s3 14s infinite}.s4{animation:s4 14s infinite}.final{animation:final 14s infinite}
+    @keyframes ip{0%,8%{transform:translateX(0)}10%,22%{transform:translateX(92px)}24%,36%{transform:translateX(184px)}38%,50%{transform:translateX(276px)}52%{transform:translateX(276px)}100%{transform:translateX(0)}}
+    @keyframes jp{0%,50%{transform:translateX(276px)}52%,64%{transform:translateX(276px)}66%,78%{transform:translateX(184px)}80%,91%{transform:translateX(92px)}93%{transform:translateX(0)}100%{transform:translateX(276px)}}
+    @keyframes p1{0%,8%{opacity:1}10%{opacity:0}100%{opacity:1}}@keyframes p2{0%,8%,24%,100%{opacity:0}10%,22%{opacity:1}}
+    @keyframes p3{0%,22%,38%,100%{opacity:0}24%,36%{opacity:1}}@keyframes p4{0%,36%,52%,100%{opacity:0}38%,50%{opacity:1}}
+    @keyframes s1{0%,64%,80%,100%{opacity:0}66%,78%{opacity:1}}@keyframes s2{0%,78%,93%,100%{opacity:0}80%,91%{opacity:1}}
+    @keyframes s3{0%,91%,100%{opacity:0}93%{opacity:1}100%{opacity:0}}@keyframes s4{0%,50%,66%,100%{opacity:0}52%,64%{opacity:1}}
+    @keyframes final{0%,88%{opacity:.35}91%{opacity:1}100%{opacity:.35}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}.c1,.c2,.c3,.c4,.c5,.c6,.c7{opacity:0!important}:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7):not(:has(~:is(.c1,.c2,.c3,.c4,.c5,.c6,.c7))){opacity:1!important}.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10{opacity:0!important}:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10):not(:has(~:is(.s0,.s1,.s2,.s3,.s4,.s5,.s6,.s7,.s8,.s9,.s10))){opacity:1!important}.row1,.row2,.row3{opacity:0!important}:is(.row1,.row2,.row3):not(:has(~:is(.row1,.row2,.row3))){opacity:1!important}.v1,.v2,.v3,.v4,.v5,.v6{opacity:0!important}:is(.v1,.v2,.v3,.v4,.v5,.v6):not(:has(~:is(.v1,.v2,.v3,.v4,.v5,.v6))){opacity:1!important}.out0,.out1,.out2{opacity:0!important}:is(.out0,.out1,.out2):not(:has(~:is(.out0,.out1,.out2))){opacity:1!important}[class^=cap]{opacity:0!important}[class^=cap]:not(:has(~[class^=cap])){opacity:1!important}[class^=count]{opacity:0!important}[class^=count]:not(:has(~[class^=count])){opacity:1!important}[class^=state]{opacity:0!important}[class^=state]:not(:has(~[class^=state])){opacity:1!important}[class^=step]{opacity:0!important}[class^=step]:not(:has(~[class^=step])){opacity:1!important}svg:has(.final) [class^=cap]{opacity:0!important}.final{opacity:1!important}[class^=p],[class*=" p"]{display:none!important}}
+  </style>
+  <style>* { animation-timing-function: steps(1, end) !important; }</style>
+  <text x="40" y="34" font-size="18" font-weight="700">nums = [1,2,3,4]; pre = 1; post = 1</text>
+  <text class="p1 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 1 / 8</text>
+  <text class="p2 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 2 / 8</text>
+  <text class="p3 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 3 / 8</text>
+  <text class="p4 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 4 / 8</text>
+  <text class="s4 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 5 / 8</text>
+  <text class="s1 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 6 / 8</text>
+  <text class="s2 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 7 / 8</text>
+  <text class="s3 mono" x="760" y="34" text-anchor="end" font-size="14" fill="#94a3b8">Step 8 / 8</text>
+  <g transform="translate(40 68)">
+    <g><rect width="78" height="50" rx="8" fill="#1e293b" stroke="#475569"/><text x="39" y="33" text-anchor="middle" font-size="18" class="mono">1</text></g>
+    <g transform="translate(92)"><rect width="78" height="50" rx="8" fill="#1e293b" stroke="#475569"/><text x="39" y="33" text-anchor="middle" font-size="18" class="mono">2</text></g>
+    <g transform="translate(184)"><rect width="78" height="50" rx="8" fill="#1e293b" stroke="#475569"/><text x="39" y="33" text-anchor="middle" font-size="18" class="mono">3</text></g>
+    <g transform="translate(276)"><rect width="78" height="50" rx="8" fill="#1e293b" stroke="#475569"/><text x="39" y="33" text-anchor="middle" font-size="18" class="mono">4</text></g>
+  </g>
+  <g transform="translate(40 118)">
+    <g class="ip"><rect width="78" height="50" rx="8" fill="none" stroke="#38bdf8" stroke-width="4"/></g>
+  </g>
+  <g transform="translate(40 118)">
+    <g class="jp"><rect width="78" height="50" rx="8" fill="none" stroke="#f59e0b" stroke-width="4" opacity=".55"/></g>
+  </g>
+  <g transform="translate(430 68)">
+    <text y="14" transform="translate(0 -24)" font-size="15" font-weight="700">ans</text>
+    <rect y="0" width="330" height="100" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text class="p1 mono" x="16" y="28" font-size="15">i=0: ans=[1,1,1,1], pre=1</text>
+    <text class="p2 mono" x="16" y="28" font-size="15">i=1: ans=[1,1,1,1], pre=2</text>
+    <text class="p3 mono" x="16" y="28" font-size="15">i=2: ans=[1,1,2,1], pre=6</text>
+    <text class="p4 mono" x="16" y="28" font-size="15">i=3: ans=[1,1,2,6], pre=24</text>
+    <text class="s4 mono" x="16" y="58" font-size="15">j=3: ans[3]*=1, post=4</text>
+    <text class="s1 mono" x="16" y="58" font-size="15">j=2: ans[2]*=4, post=12</text>
+    <text class="s2 mono" x="16" y="58" font-size="15">j=1: ans[1]*=12, post=24</text>
+    <text class="s3 mono" x="16" y="58" font-size="15">j=0: ans[0]*=24, post=24</text>
+  </g>
+  <g transform="translate(40 205)">
+    <rect width="720" height="62" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text class="p1 mono" x="18" y="38" font-size="16">prefix i=0: ans[0]=1; pre*=1</text>
+    <text class="p2 mono" x="18" y="38" font-size="16">prefix i=1: ans[1]=1; pre*=2</text>
+    <text class="p3 mono" x="18" y="38" font-size="16">prefix i=2: ans[2]=2; pre*=3</text>
+    <text class="p4 mono" x="18" y="38" font-size="16">prefix i=3: ans[3]=6; pre*=4</text>
+    <text class="s4 mono" x="18" y="38" font-size="16">suffix j=3: 6×1 → 6</text>
+    <text class="s1 mono" x="18" y="38" font-size="16">suffix j=2: 2×4 → 8</text>
+    <text class="s2 mono" x="18" y="38" font-size="16">suffix j=1: 1×12 → 12</text>
+    <text class="s3 mono" x="18" y="38" font-size="16">suffix j=0: 1×24 → 24</text>
+  </g>
+  <g class="final" transform="translate(40 318)">
+    <text font-size="18" fill="#22c55e" font-weight="700">return [24,12,8,6]</text>
+  </g>
+</svg>
